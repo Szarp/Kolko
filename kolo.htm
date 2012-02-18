@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="kolo.css" type="text/css">
+<script type="text/javascript">
+var
+id0enable=0;
+id1enable=0;
+id2enable=0;
+id3enable=0;
+function start(){ // tu byl alert
+ 
+  var element = document.getElementById( "id1a" );
+  element.addEventListener("click",clickowoc);
+  
+  var element = document.getElementById( "id2a" );
+        element.addEventListener("click",clickowoc2a);
+  
+   var element = document.getElementById( "id3a" );
+  element.addEventListener("click",clickowoc3a);
+ 
+  var element = document.getElementById( "id3c" );
+  element.addEventListener("click",clickowoc3c);
+}
+
+  function clickowoc(){ //tu byl alert
+   var dimg=document.getElementById("id1aimg"); //tu byl alert
+      if (id0enable==0) {	
+  	    dimg.src="kwadrat.png";
+		id0enable=1;
+		} else {   //alert ("aa")
+		   if (id0enable==1){
+		      dimg.src="jablko.png";
+		      id0enable=2;
+		   } else {
+		     if (id0enable==2){ //alert (id0enable);
+	           dimg.src="owoc.png";
+			   id0enable=0;
+	         }
+		   } 
+	    }
+	  }
+	  
+	 
+	   
+		
+	  function clickowoc2a(){ //alert ("b");
+   var dimg=document.getElementById("id2aimg"); //tu byl alert
+      if (id1enable==0) {	
+  	    dimg.src="przecietyowoc.png";
+		id1enable=1;
+		}
+		 else{   //alert ("aa")
+		   if (id1enable==1){
+		      dimg.src="jablko.png";
+		      id1enable=2;
+		   }
+		   else{
+		    if (id1enable==2){ //alert (id0enable);
+	           dimg.src="owoc.png";
+			   id1enable=0;
+	       }
+		   } 
+	    }
+	  }
+	  
+	 
+	  
+	  function clickowoc3a(){ //tu byl alert
+   var dimg=document.getElementById("id3aimg"); //tu byl alert
+      if (id2enable==0) {	
+  	    dimg.src="przecietyowoc.png";
+		id2enable=1;
+		}
+		 else{   //alert ("aa")
+		   if (id2enable==1){
+		      dimg.src="jablko.png";
+		      id2enable=2;
+		   }
+		   else{
+		    if (id2enable==2){ //alert (id0enable);
+	           dimg.src="owoc.png";
+			   id2enable=0;
+	       }
+		   } 
+	    }
+	  }
+	  
+	  function clickowoc3c(){ //tu byl alert
+ var dimg=document.getElementById("id3c"); //tu byl alert
+      if (id3enable==0) {	
+  	    dimg.className="cc";
+		id3enable=1;
+		}
+		 else{   //alert ("aa")
+		   if (id3enable==1){
+		      dimg.className="pp";
+		     id3enable=0;
+		   }
+		 }  
+	  }
+</script>
+	
+	  
+</head>
+
+<body >
+ <table border="1" width="7%" height="110%">
+ <tr align="center">
+ <td> <div id="id1a"> <img id="id1aimg" src="owoc.png"/> </div> </td> 
+ <td> <div id="id2a"> <img id="id2aimg" src="owoc.png"/> </div>  </td>
+ <td> <div id="id3a"> <img id="id3aimg" src="owoc.png"/> </div>  </td>
+ </tr>
+ <tr align="center">
+ <td> <div id="id1b"> <img src="owoc.png"/> </div>  </td>
+ <td> <div id="id2b"> <img src="owoc.png"/> </div>  </td>
+ <td>  <div class="kolo" id="id3b"> <img src="owoc.png"/> </div>  </td>
+ </tr> 
+ <tr align="center">
+ <td> <div id="id1c"> <img src="owoc.png"/> </div>  </td>
+ <td> <div class="pp" id="id2c">  </div>  </td>
+ <td> <div class="cc" id="id3c"> <img id="id3cimg" /> </div>  </td>
+ </tr>
+ </table>
+ 
+
+
+<div style="
+    background-color: #464646;
+    border-radius: 35px 35px 35px 35px;
+    float: left;
+    height: 70px;
+    margin-right: 40px;
+    margin-top: 20px;
+    text-align: center;
+    width: 70px;">
+<span style="height: 70px;
+width: 70px;
+-moz-border-radius: 35px;
+border-radius: 35px;">F</span>
+</div>
+ 
+ <script type="text/javascript">
+window.onload = start(0);
+</script>
+</body>
+</html>
