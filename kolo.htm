@@ -4,38 +4,51 @@
 <link rel="stylesheet" href="kolo.css" type="text/css">
 <script type="text/javascript">
 var
-id0enable=0;
-id1enable=0;
-id2enable=0;
-id3enable=0;
+
+idenable=[0,0,0,0,0,0,0,0,0,0];
 function start(){ // tu byl alert
  
   var element = document.getElementById( "id1a" );
-  element.addEventListener("click",clickowoc);
+  element.addEventListener("click",clickowoc1a);
   
   var element = document.getElementById( "id2a" );
         element.addEventListener("click",clickowoc2a);
   
    var element = document.getElementById( "id3a" );
   element.addEventListener("click",clickowoc3a);
- 
+  
+  var element = document.getElementById( "id1b" );
+  element.addEventListener("click",clickowoc1b);
+  
+  var element = document.getElementById( "id2b" );
+  element.addEventListener("click",clickowoc2b);
+  
+  var element = document.getElementById( "id3b" );
+  element.addEventListener("click",clickowoc3b);
+  
+  var element = document.getElementById( "id1c" );
+  element.addEventListener("click",clickowoc1c);
+  
+ var element = document.getElementById( "id2c" );
+  element.addEventListener("click",clickowoc2c);
+  
   var element = document.getElementById( "id3c" );
   element.addEventListener("click",clickowoc3c);
 }
 
-  function clickowoc(){ //tu byl alert
-   var dimg=document.getElementById("id1aimg"); //tu byl alert
-      if (id0enable==0) {	
+  function clickowoc(idimg,nrid){ //tu byl alert
+   var dimg=document.getElementById(idimg); //tu byl alert
+      if (idenable[nrid]==0) {	
   	    dimg.src="kwadrat.png";
-		id0enable=1;
+		idenable[nrid]=1;
 		} else {   //alert ("aa")
-		   if (id0enable==1){
+		   if (idenable[nrid]==1){
 		      dimg.src="jablko.png";
-		      id0enable=2;
+		      idenable[nrid]=2;
 		   } else {
-		     if (id0enable==2){ //alert (id0enable);
+		     if (idenable[nrid]==2){ //alert (id0enable);
 	           dimg.src="owoc.png";
-			   id0enable=0;
+			   idenable[nrid]=0;
 	         }
 		   } 
 	    }
@@ -44,60 +57,32 @@ function start(){ // tu byl alert
 	 
 	   
 		
-	  function clickowoc2a(){ //alert ("b");
-   var dimg=document.getElementById("id2aimg"); //tu byl alert
-      if (id1enable==0) {	
-  	    dimg.src="przecietyowoc.png";
-		id1enable=1;
-		}
-		 else{   //alert ("aa")
-		   if (id1enable==1){
-		      dimg.src="jablko.png";
-		      id1enable=2;
-		   }
-		   else{
-		    if (id1enable==2){ //alert (id0enable);
-	           dimg.src="owoc.png";
-			   id1enable=0;
-	       }
-		   } 
-	    }
+	  function clickowoc1a(){ //alert ("b");
+   clickowoc("id1aimg",1)
 	  }
-	  
-	 
-	  
-	  function clickowoc3a(){ //tu byl alert
-   var dimg=document.getElementById("id3aimg"); //tu byl alert
-      if (id2enable==0) {	
-  	    dimg.src="przecietyowoc.png";
-		id2enable=1;
-		}
-		 else{   //alert ("aa")
-		   if (id2enable==1){
-		      dimg.src="jablko.png";
-		      id2enable=2;
-		   }
-		   else{
-		    if (id2enable==2){ //alert (id0enable);
-	           dimg.src="owoc.png";
-			   id2enable=0;
-	       }
-		   } 
-	    }
+	    function clickowoc2a(){ //alert ("b");
+   clickowoc("id2aimg",2)
 	  }
-	  
+	   function clickowoc3a(){ //alert ("b");
+   clickowoc("id3aimg",3)
+	  }
+	    function clickowoc1b(){ //alert ("b");
+   clickowoc("id1bimg",4)
+	  }
+	    function clickowoc2b(){ //alert ("b");
+   clickowoc("id2bimg",5)
+	  }
+	  function clickowoc3b(){ //tu byl alert
+   clickowoc("id3bimg",6)
+	  }
+	    function clickowoc1c(){ //alert ("b");
+   clickowoc("id1cimg",7)
+	  }
+	    function clickowoc2c(){ //alert ("b");
+   clickowoc("id2cimg",8)
+	  }
 	  function clickowoc3c(){ //tu byl alert
- var dimg=document.getElementById("id3c"); //tu byl alert
-      if (id3enable==0) {	
-  	    dimg.className="cc";
-		id3enable=1;
-		}
-		 else{   //alert ("aa")
-		   if (id3enable==1){
-		      dimg.className="pp";
-		     id3enable=0;
-		   }
-		 }  
+    clickowoc("id3cimg",9)
 	  }
 </script>
 	
@@ -112,13 +97,13 @@ function start(){ // tu byl alert
  <td> <div id="id3a"> <img id="id3aimg" src="owoc.png"/> </div>  </td>
  </tr>
  <tr align="center">
- <td> <div id="id1b"> <img src="owoc.png"/> </div>  </td>
- <td> <div id="id2b"> <img src="owoc.png"/> </div>  </td>
- <td>  <div class="kolo" id="id3b"> <img src="owoc.png"/> </div>  </td>
+ <td> <div id="id1b"> <img  id="id1bimg" src="owoc.png"/> </div>  </td>
+ <td> <div id="id2b"> <img id="id2bimg" src="owoc.png"/> </div>  </td>
+ <td>  <div class="kolo" id="id3b"> <img id="id3bimg" src="owoc.png"/> </div>  </td>
  </tr> 
  <tr align="center">
- <td> <div id="id1c"> <img src="owoc.png"/> </div>  </td>
- <td> <div class="pp" id="id2c">  </div>  </td>
+ <td> <div id="id1c"> <img id="id1cimg" src="owoc.png"/> </div>  </td>
+ <td> <div class="pp" id="id2c">  <img id="id2cimg" src="owoc.png"/> </div>  </td>
  <td> <div class="cc" id="id3c"> <img id="id3cimg" /> </div>  </td>
  </tr>
  </table>
